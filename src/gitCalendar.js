@@ -3,13 +3,14 @@ import moment from 'moment';
 let seedDate = moment().day('Sunday');
 let gitCalendar = [];
 let momentCount = 0;
-let weekCount = 1;
+let weekCount = 0;
 
-for(weekCount; weekCount < 53 ; weekCount++){
-  let weekObj = {week: weekCount };
-  for(let i = 1; i < 8; i++, momentCount++){
+for(weekCount; weekCount < 52 ; weekCount++){
+  let weekObj = {week: weekCount,
+                  dates: []};
+  for(let i = 0; i < 7; i++, momentCount++){
     let tempDate = seedDate.clone();
-    weekObj[i] = tempDate.add(momentCount, 'd').format('dddd, MMMM Do YYYY');
+    weekObj.dates.push(tempDate.add(momentCount, 'd').format('dddd, MMMM Do YYYY'));
   }
   gitCalendar.push(weekObj);
 };

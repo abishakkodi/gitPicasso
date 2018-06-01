@@ -8,15 +8,22 @@ class App extends Component {
 
     constructor(props) {
       super(props);
-
       this.state = {
-        gitCalendar
+        gitCalendar,
+        storedDates: [],
+        textInput: ''
       };
       this.addDate = this.addDate.bind(this);
+      this.handleChange = this.handleChange.bind(this);
     }
 
     addDate(){
 
+    }
+
+    handleChange(e){
+      console.log(e.target.value);
+      this.setState({[e.target.name]:e.target.value});
     }
 
   render() {
@@ -28,13 +35,27 @@ class App extends Component {
                       return(<div className='gitColumn' key={key}>
                                 <GitColumn />
                             </div>);
-                    })
+                    });
+
+      let columns2 = gitCalendar.map((week, key)=>{
+        return(<div className='gitColumn' key={key}>
+                                <GitColumn week={week}/>
+                            </div>);
+      })
 
     return (
       <div className="App">
         <div className='gitGrid'>
-          {columns}
+          {columns2}
         </div>
+        <div>
+          <form>
+            <label> Enter Text Here </label>
+            <input type='text' name='textInput' value={this.state.textInput} onChange={this.handleChange}/>
+          </form>
+
+        </div>
+
       </div>
     );
   }
