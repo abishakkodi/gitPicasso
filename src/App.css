@@ -1,28 +1,27 @@
-.App {
-  text-align: center;
+.gitSquare {
+  height: 10px;
+  width: 10px;
+  background: #34C839FF;
+  margin: 2px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.gitSquare:hover {
+  height: 10px;
+  width: 10px;
+  background: #FB4439FF;
+  margin: 2px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+.gitGrid {
+  display: grid;
+  grid-template-columns: 1fr repeat(52, 1fr) 1fr;
+  grid-gap: .5fr;
+
 }
 
-.App-title {
-  font-size: 1.5em;
-}
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.gitWeek {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
 }

@@ -1,21 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import gitCalendar from './gitCalendar';
+import GitColumn from './components/GitColumn';
+
 
 class App extends Component {
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        gitCalendar
+      };
+      this.addDate = this.addDate.bind(this);
+    }
+
+    addDate(){
+
+    }
+
   render() {
+          let init = Array(52).fill(1);
+          let init2 = Array(7).fill(1);
+
+
+      let columns =    init.map((item, key)=>{
+                      return(<div className='gitColumn' key={key}>
+                                <GitColumn />
+                            </div>);
+                    })
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className='gitGrid'>
+          {columns}
+        </div>
       </div>
     );
   }
 }
 
 export default App;
+
+
