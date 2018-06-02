@@ -1,14 +1,14 @@
 .gitSquare {
   height: 10px;
   width: 10px;
-  background: #34C839FF;
+  background: #B9C8C5FF;
   margin: 2px;
 }
 
 .gitSquare:hover {
   height: 10px;
   width: 10px;
-  background: #FB4439FF;
+  background: #34C839FF;
   margin: 2px;
 }
 

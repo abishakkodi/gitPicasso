@@ -6,8 +6,8 @@ class GitColumn extends React.Component {
     return (
       <div className='gitWeek'>
         {
-          this.props.week.dates.map((date, id)=>{
-            return(<Square id={id} key={id * 100} date={date}/>)
+          this.props.week.dates.map((dateObj, id)=>{
+            return(<Square key={id * 100} date={dateObj}/>)
           })
         }
 

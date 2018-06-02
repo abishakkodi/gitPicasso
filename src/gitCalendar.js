@@ -9,8 +9,10 @@ for(weekCount; weekCount < 52 ; weekCount++){
   let weekObj = {week: weekCount,
                   dates: []};
   for(let i = 0; i < 7; i++, momentCount++){
-    let tempDate = seedDate.clone();
-    weekObj.dates.push(tempDate.add(momentCount, 'd').format('dddd, MMMM Do YYYY'));
+    let tempDate = {};
+    tempDate[i] = seedDate.clone().add(momentCount, 'd').format('dddd, MMMM Do YYYY'); //the calculated date
+    tempDate['status'] = false;
+    weekObj.dates.push(tempDate);
   }
   gitCalendar.push(weekObj);
 };
