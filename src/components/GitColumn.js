@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Square from './Square';
 
-class GitColumn extends React.Component {
+class GitColumn extends Component {
   render() {
     return (
       <div className='gitWeek'>
         {
           this.props.week.dates.map((dateObj, id)=>{
-            return(<Square key={id * 100} date={dateObj}/>)
+            return(<Square key={id * 100} date={dateObj} weekId={this.props.weekId} dateId={id}
+              modifyDate={this.props.modifyDate}/>)
           })
         }
 

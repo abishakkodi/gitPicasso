@@ -13,12 +13,19 @@ class App extends Component {
         storedDates: [],
         textInput: ''
       };
-      this.addDate = this.addDate.bind(this);
+
+      this.modifyDate = this.modifyDate.bind(this);
       this.handleChange = this.handleChange.bind(this);
     }
 
-    addDate(){
+    modifyDate(week, day) {
+      let newGitCalendar = this.state.gitCalendar;
+      newGitCalendar[week].dates[day].status = !newGitCalendar[week].dates[day].status;
+      this.setState({gitCalendar: newGitCalendar});
+    }
 
+    handleDateChange(e){
+      e.preventDefault();
     }
 
     handleChange(e){
@@ -27,19 +34,10 @@ class App extends Component {
     }
 
   render() {
-          let init = Array(52).fill(1);
-          let init2 = Array(7).fill(1);
-
-
-      let columns =    init.map((item, key)=>{
-                      return(<div className='gitColumn' key={key}>
-                                <GitColumn />
-                            </div>);
-                    });
-
       let columns2 = gitCalendar.map((week, key)=>{
         return(<div className='gitColumn' key={key}>
-                                <GitColumn week={week}/>
+                                <GitColumn week={week} weekId={week.week}
+                                modifyDate={this.modifyDate}/>
                             </div>);
       })
 

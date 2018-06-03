@@ -1,11 +1,20 @@
-.gitSquare {
+.activeGitSquare {
+  height: 10px;
+  width: 10px;
+  background: #34C839FF;
+  margin: 2px;
+}
+
+.inactiveGitSquare {
   height: 10px;
   width: 10px;
   background: #B9C8C5FF;
   margin: 2px;
 }
 
-.gitSquare:hover {
+
+
+.inactiveGitSquare:hover {
   height: 10px;
   width: 10px;
   background: #34C839FF;

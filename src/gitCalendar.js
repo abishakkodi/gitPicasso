@@ -18,3 +18,14 @@ for(weekCount; weekCount < 52 ; weekCount++){
 };
 
 export default gitCalendar;
+
+
+/*
+let example = [{
+      week: 0
+      dates: [{
+        '0': 'Sunday, June 3rd 2018',
+        status: false
+      }];
+
+*/

@@ -1,20 +1,15 @@
-import React from 'react';
+import React, {Component} from 'react';
+import '../App.css';
 
-class Square extends React.Component {
-constructor(props){
+class Square extends Component {
 
-  super(props);
-  let date = props.date[props.id];
-  let status = props.date.status;
-    this.state = {
-      date,
-      status
-    }
-
-}
  render() {
+    const week = this.props.weekId, day = this.props.dateId, status = this.props.date.status, modifyDate = this.props.modifyDate;
+
+    const modDate = () => { modifyDate(week,day);
+      console.log(this);}
     return (
-      <div className='gitSquare'>
+      <div className={status ? 'activeGitSquare' : 'inactiveGitSquare' } onClick={modDate}>
 
       </div>
     );
