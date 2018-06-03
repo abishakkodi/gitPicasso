@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import gitCalendar from './gitCalendar';
 import GitColumn from './components/GitColumn';
+import DatesView from './components/DatesView';
 
 
 class App extends Component {
@@ -22,10 +23,22 @@ class App extends Component {
       let newGitCalendar = this.state.gitCalendar;
       newGitCalendar[week].dates[day].status = !newGitCalendar[week].dates[day].status;
       this.setState({gitCalendar: newGitCalendar});
+      this.renderDateList();
     }
 
-    handleDateChange(e){
-      e.preventDefault();
+    renderDateList(){
+      let storedDates = [];
+      const weeks = 52, days = 6, calendar = this.state.gitCalendar;
+      console.log(calendar[0]);
+      for(let i = 0; i < weeks; i++){
+        for(let j = 0; j < days; j++){
+          if(calendar[i].dates[j].status) {
+            const date = calendar[i].dates[j][j];
+            storedDates.push(date);
+          }
+        }
+      }
+      this.setState({storedDates});
     }
 
     handleChange(e){
@@ -51,9 +64,8 @@ class App extends Component {
             <label> Enter Text Here </label>
             <input type='text' name='textInput' value={this.state.textInput} onChange={this.handleChange}/>
           </form>
-
         </div>
-
+        <DatesView dates={this.state.storedDates} />
       </div>
     );
   }
