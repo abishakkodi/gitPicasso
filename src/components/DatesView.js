@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 
-class DateView extends React.Component {
+class DateView extends Component {
   render() {
     return (
       <div>
-        <h1> DATES </h1>
-
+        <h3> Commit Dates </h3>
+          <div>
+          <ul>
+          {this.props.dates.map((date,id)=>{
+            return(
+                <li key={id}>{date}</li>
+              )
+          })}
+          </ul>
+          </div>
       </div>
     );
   }

@@ -12,24 +12,31 @@ class App extends Component {
       this.state = {
         gitCalendar,
         storedDates: [],
-        textInput: ''
+        textInput: '',
+        newCalendar: gitCalendar
       };
-
       this.modifyDate = this.modifyDate.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.resetDates = this.resetDates.bind(this);
+    }
+
+    resetDates(){
     }
 
     modifyDate(week, day) {
       let newGitCalendar = this.state.gitCalendar;
       newGitCalendar[week].dates[day].status = !newGitCalendar[week].dates[day].status;
       this.setState({gitCalendar: newGitCalendar});
-      this.renderDateList();
+      this.modifyStoredDates();
+      console.log('finished modify date');
     }
 
-    renderDateList(){
+    modifyStoredDates(){
+      console.log('fired modify stored date');
+      console.log(this.state.gitCalendar);
+
       let storedDates = [];
-      const weeks = 52, days = 6, calendar = this.state.gitCalendar;
-      console.log(calendar[0]);
+      const weeks = 52, days = 7, calendar = this.state.gitCalendar;
       for(let i = 0; i < weeks; i++){
         for(let j = 0; j < days; j++){
           if(calendar[i].dates[j].status) {
@@ -64,6 +71,7 @@ class App extends Component {
             <label> Enter Text Here </label>
             <input type='text' name='textInput' value={this.state.textInput} onChange={this.handleChange}/>
           </form>
+          <button onClick={this.resetDates}> Reset Dates </button>
         </div>
         <DatesView dates={this.state.storedDates} />
       </div>
