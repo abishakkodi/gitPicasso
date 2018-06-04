@@ -1,5 +1,6 @@
 const fontLibrary = {
 
+
   a: [
     [false, false, true, true, true, true, false],
     [false, true, false, true, false, false, false],
@@ -21,9 +22,9 @@ const fontLibrary = {
   ],
   d: [
     [false, true, true, true, true, true, false],
-    [false, true, false, true, false, true, false],
-    [false, true, false, true, false, true, false],
-    [false, false, true, true, false, false, false]
+    [false, true, false, false, false, true, false],
+    [false, true, false, false, false, true, false],
+    [false, false, true, true, true, false, false]
   ],
   e: [
     [false, true, true, true, true, true, false],
@@ -80,14 +81,14 @@ const fontLibrary = {
   ],
   n: [
     [false, true, true, true, true, true, false],
-    [false, true, true, true, true, true, false],
-    [false, true, true, true, true, true, false],
+    [false, false, true, false, false, false, false],
+    [false, false, false, true, false, false, false],
     [false, true, true, true, true, true, false]
   ],
   o: [
     [false, true, true, true, true, true, false],
-    [false, false, true, false, false, false, false],
-    [false, false, false, true, false, false, false],
+    [false, true, false, false, false, true, false],
+    [false, true, false, false, false, true, false],
     [false, true, true, true, true, true, false]
   ],
   p: [
@@ -126,12 +127,12 @@ const fontLibrary = {
     [false, true, true, true, true, false, false]
   ],
   v: [
-     [false, true, true, true, true, false, false],
+    [false, true, true, true, true, false, false],
     [false, false, false, false, false, true, false],
     [false, true, true, true, true, false, false]
   ],
   w: [
-     [false, true, true, true, true, true, false],
+    [false, true, true, true, true, true, false],
     [false, false, false, false, true, false, false],
     [false, false, false, false, true, false, false],
     [false, true, true, true, true, true, false]
@@ -154,14 +155,14 @@ const fontLibrary = {
     [false, true, true, false, false, true, false]
   ],
 
-  '':[
-  [false, false, false, false, false, false, false]
+  '': [
+    [false, false, false, false, false, false, false]
   ],
 
-  ' ':[[false, false, false, false, false, false, false],
-       [false, false, false, false, false, false, false],
-       [false, false, false, false, false, false, false]]
+  ' ': [
+    [false, false, false, false, false, false, false]
+  ]
+};
 
-}
 
 export default fontLibrary;

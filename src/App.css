@@ -25,7 +25,7 @@
 .gitGrid {
   display: grid;
   grid-template-columns: 1fr repeat(52, 1fr) 1fr;
-  grid-gap: .5fr;
+  grid-gap: .25fr;
 
 }
 

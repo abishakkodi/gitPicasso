@@ -54,8 +54,6 @@ class App extends Component {
       }
     }
 
-
-
     modifyStoredDates(){
       let storedDates = [];
       const weeks = 52, days = 7, calendar = this.state.gitCalendar;
@@ -77,29 +75,34 @@ class App extends Component {
     }
 
     displayInput() {
-      if (this.state.textInput === '') {
-        this.resetDates();
-      } else {
-        let letters = this.state.textInput.toLowerCase().split('');
-        let display = [];
-        let space = fontLibrary[''];
+   if (this.state.textInput === '') {
+     this.resetDates();
+   } else {
+     let letters = this.state.textInput.toLowerCase().split('');
+     let display = [];
+     let space = [false, false, false, false, false, false];
 
-        for (let i = 0; i < letters.length; i++) {
-          let letter = fontLibrary[letters[i]];
-          for (var line in letter) {
-            display.push(letter[line]);
-          }
-          display.push(space);
-        }
+     for (let i = 0; i < letters.length; i++) {
+       let letter = fontLibrary[letters[i]];
+       for (var line in letter) {
+         display.push(letter[line]);
+       }
+       display.push(space);
+     }
 
-        for (let week = 0; week < display.length; week++) {
-          for (let day = 0; day < 7; day++) {
-            let value = display[week][day];
-            this.modifyDate(week, day, value);
-          }
-        }
-      }
-    }
+     if (display.length < 53) {
+
+       for (let week = 0; week < display.length; week++) {
+         for (let day = 1; day < 7; day++) {
+           let value = display[week][day];
+           if (value) {
+             this.modifyDate(week, day, value);
+           }
+         }
+       }
+     }
+   }
+ }
 
 
   render() {
