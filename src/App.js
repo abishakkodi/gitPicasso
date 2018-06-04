@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+//import _ from 'lodash';
 import './App.css';
 import gitCalendar from './gitCalendar';
+import fontLibrary from './fontLibrary';
 import GitColumn from './components/GitColumn';
 import DatesView from './components/DatesView';
-
 
 class App extends Component {
 
@@ -12,29 +13,50 @@ class App extends Component {
       this.state = {
         gitCalendar,
         storedDates: [],
-        textInput: '',
-        newCalendar: gitCalendar
+        textInput: ''
       };
+
       this.modifyDate = this.modifyDate.bind(this);
       this.handleChange = this.handleChange.bind(this);
       this.resetDates = this.resetDates.bind(this);
     }
 
     resetDates(){
+      const weeks = 52, days = 7;
+      let reset = this.state.gitCalendar;
+      for(let i = 0; i < weeks; i++){
+        for(let j = 0; j < days; j++){
+          reset[i].dates[j].status = false;
+          }
+      }
+      this.setState({ gitCalendar: reset, storedDates: [] });
     }
 
-    modifyDate(week, day) {
+    modifyDate(week, day, value) {
       let newGitCalendar = this.state.gitCalendar;
-      newGitCalendar[week].dates[day].status = !newGitCalendar[week].dates[day].status;
-      this.setState({gitCalendar: newGitCalendar});
+      if(value === undefined ){
+        newGitCalendar[week].dates[day].status = !newGitCalendar[week].dates[day].status;
+      } else {
+        newGitCalendar[week].dates[day].status = value;
+      }
+
+      this.setState({gitCalendar: newGitCalendar}, ()=>{
       this.modifyStoredDates();
-      console.log('finished modify date');
+      });
     }
+
+
+    componentWillUpdate(nextProps, nextState) {
+      console.log(nextState);
+      const textInput = this.state.textInput;
+      if(textInput !== nextState.textInput){
+        return true;
+      }
+    }
+
+
 
     modifyStoredDates(){
-      console.log('fired modify stored date');
-      console.log(this.state.gitCalendar);
-
       let storedDates = [];
       const weeks = 52, days = 7, calendar = this.state.gitCalendar;
       for(let i = 0; i < weeks; i++){
@@ -49,9 +71,36 @@ class App extends Component {
     }
 
     handleChange(e){
-      console.log(e.target.value);
-      this.setState({[e.target.name]:e.target.value});
+      this.setState({[e.target.name]:e.target.value}, ()=>{
+      this.displayInput();
+      });
     }
+
+    displayInput() {
+      if (this.state.textInput === '') {
+        this.resetDates();
+      } else {
+        let letters = this.state.textInput.toLowerCase().split('');
+        let display = [];
+        let space = fontLibrary[''];
+
+        for (let i = 0; i < letters.length; i++) {
+          let letter = fontLibrary[letters[i]];
+          for (var line in letter) {
+            display.push(letter[line]);
+          }
+          display.push(space);
+        }
+
+        for (let week = 0; week < display.length; week++) {
+          for (let day = 0; day < 7; day++) {
+            let value = display[week][day];
+            this.modifyDate(week, day, value);
+          }
+        }
+      }
+    }
+
 
   render() {
       let columns2 = gitCalendar.map((week, key)=>{

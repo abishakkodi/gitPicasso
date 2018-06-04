@@ -1,173 +1,167 @@
 const fontLibrary = {
 
   a: [
-    [false, true, true, true, true],
-    [true, false, true, false, false],
-    [true, false, true, false, false],
-    [false, true, true, true, true]
+    [false, false, true, true, true, true, false],
+    [false, true, false, true, false, false, false],
+    [false, true, false, true, false, false, false],
+    [false, false, true, true, true, true, false]
   ],
   b: [
-    [true, true, true, true, true],
-    [true, false, true, false, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, true, true, true, true, false],
+    [false, true, true, true, true, true, false]
   ],
 
   c: [
-    [false, true, true, true, false],
-    [true, false, false, false, true],
-    [true, false, false, false, true],
-    [true, true, false, true, true]
+    [false, false, true, true, true, false, false],
+    [false, true, false, false, false, true, false],
+    [false, true, false, false, false, true, false],
+    [false, true, true, false, true, true, false]
   ],
   d: [
-    [true, true, true, true, true],
-    [true, false, true, false, true],
-    [true, false, true, false, true],
-    [true, false, false, false, true]
+    [false, true, true, true, true, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, false, true, true, false, false, false]
   ],
   e: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, false, false, true, false]
   ],
-  d: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
-  ],
+
   f: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, true, false, true, false, false, false],
+    [false, true, false, true, false, false, false],
+    [false, true, false, false, false, false, false]
   ],
   g: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, false, true, true, true, false, false],
+    [false, true, false, false, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, false, false, true, true, false, false]
   ],
-  f: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
-  ],
-  g: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
-  ],
+
   h: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, false, false, true, false, false, false],
+    [false, false, false, true, false, false, false],
+    [false, true, true, true, true, true, false]
   ],
   i: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+  ],
+  j: [
+    [false, false, false, false, true, false, false],
+    [false, false, false, false, false, true, false],
+    [false, false, false, false, false, true, false],
+    [false, true, true, true, true, false, false]
   ],
   k: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, false, false, true, false, false, false],
+    [false, false, true, false, true, false, false],
+    [false, true, false, false, false, true, false]
   ],
   l: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, false, false, false, false, true, false],
+    [false, false, false, false, false, true, false],
+    [false, false, false, false, false, true, false]
   ],
   m: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, false, true, false, false, false, false],
+    [false, false, true, false, false, false, false],
+    [false, true, true, true, true, true, false]
   ],
   n: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, true, true, true, true, true, false],
+    [false, true, true, true, true, true, false],
+    [false, true, true, true, true, true, false]
   ],
   o: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, false, true, false, false, false, false],
+    [false, false, false, true, false, false, false],
+    [false, true, true, true, true, true, false]
   ],
   p: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, false, true, true, true, false, false],
+    [false, true, false, false, false, true, false],
+    [false, true, false, false, false, true, false],
+    [false, false, true, true, true, false, false]
   ],
   q: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, false, true, true, true, false, false],
+    [false, true, false, false, false, true, false],
+    [false, true, false, false, true, true, false],
+    [false, false, true, true, true, true, false]
   ],
   r: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, true, false],
+    [false, true, false, true, false, false, false],
+    [false, true, false, true, true, false, false],
+    [false, false, true, false, false, true, false]
   ],
   s: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, false, true, false, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, false, true, false, false]
   ],
   t: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, false, false, false, false, false],
+    [false, true, true, true, true, true, false],
+    [false, true, false, false, false, false, false]
   ],
   u: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, true, true, false, false],
+    [false, false, false, false, false, true, false],
+    [false, false, false, false, false, true, false],
+    [false, true, true, true, true, false, false]
   ],
   v: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+     [false, true, true, true, true, false, false],
+    [false, false, false, false, false, true, false],
+    [false, true, true, true, true, false, false]
   ],
   w: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+     [false, true, true, true, true, true, false],
+    [false, false, false, false, true, false, false],
+    [false, false, false, false, true, false, false],
+    [false, true, true, true, true, true, false]
   ],
   x: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, false, true, true, false],
+    [false, false, false, true, false, false, false],
+    [false, false, false, true, false, false, false],
+    [false, true, true, false, true, true, false]
   ],
   y: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
+    [false, true, true, false, false, false, false],
+    [false, false, false, true, true, true, false],
+    [false, true, true, false, false, false, false]
   ],
   z: [
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true],
-    [true, true, true, true, true]
-  ]
+    [false, true, false, false, true, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, false, true, false, true, false],
+    [false, true, true, false, false, true, false]
+  ],
+
+  '':[
+  [false, false, false, false, false, false, false]
+  ],
+
+  ' ':[[false, false, false, false, false, false, false],
+       [false, false, false, false, false, false, false],
+       [false, false, false, false, false, false, false]]
 
 }
+
+export default fontLibrary;
