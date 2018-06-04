@@ -2,14 +2,14 @@
   height: 10px;
   width: 10px;
   background: #34C839FF;
-  margin: 2px;
+  margin: 1px;
 }
 
 .inactiveGitSquare {
   height: 10px;
   width: 10px;
   background: #B9C8C5FF;
-  margin: 2px;
+  margin: 1px;
 }
 
 
@@ -18,7 +18,7 @@
   height: 10px;
   width: 10px;
   background: #34C839FF;
-  margin: 2px;
+  margin: 1px;
 }
 
 
@@ -26,11 +26,30 @@
   display: grid;
   grid-template-columns: 1fr repeat(52, 1fr) 1fr;
   grid-gap: .25fr;
-
+  max-width: 70%;
+  margin-left: 15%
 }
-
 
 .gitWeek {
   display: grid;
   grid-template-rows: repeat(7, 1fr);
+    grid-gap: 1fr;
+
+}
+
+.App {
+  font-family: 'Open Sans', sans-serif;
+  margin: auto;
+}
+
+.title {
+  text-align: center;
+}
+
+.datesView {
+  margin-left: 10%;
+}
+
+.entry {
+  text-align: center;
 }

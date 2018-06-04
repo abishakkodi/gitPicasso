@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../App.css';
 
-class Square extends Component {
+const Square = (props) => {
 
- render() {
-    const week = this.props.weekId, day = this.props.dateId, status = this.props.date.status, modifyDate = this.props.modifyDate;
+    const week = props.weekId, day = props.dateId, status = props.date.status, modifyDate = props.modifyDate;
 
     const modDate = () => { modifyDate(week,day)}
     return (
@@ -12,7 +11,6 @@ class Square extends Component {
 
       </div>
     );
-  }
 }
 
 export default Square;

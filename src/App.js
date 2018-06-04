@@ -115,10 +115,13 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="title">
+        <h1>Git Commitment </h1>
+        </div>
         <div className='gitGrid'>
           {columns2}
         </div>
-        <div>
+        <div className='entry'>
           <form>
             <label> Enter Text Here </label>
             <input type='text' name='textInput' value={this.state.textInput} onChange={this.handleChange}/>
