@@ -117,7 +117,9 @@ class App extends Component {
       <div className="App">
         <div className="title">
         <h1>Git Commitment </h1>
+        <h4>Click the squares or type to get dates for the commits</h4>
         </div>
+
         <div className='gitGrid'>
           {columns2}
         </div>
