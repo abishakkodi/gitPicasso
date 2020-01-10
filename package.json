@@ -13,8 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "amazonserve": "build && aws s3 sync build/ s3://gitcommitment"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [

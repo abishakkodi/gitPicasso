@@ -24,7 +24,8 @@
   grid-template-columns: 1fr repeat(52, 1fr) 1fr;
   grid-gap: .25fr;
   max-width: 640px;
-  margin-left: 15%
+  margin-left: 10vw;
+
 }
 
 .gitWeek {
@@ -50,22 +51,78 @@ Body {
 }
 
 .datesView {
-  margin-left: 10%;
-}
-
-.dateList {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .entry {
   text-align: center;
+  margin: 5px;
 }
 
 .reset {
-  padding-top: 20px;
+  border-style: solid;
+  border-color: white;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px;
 }
 
 ul {
   list-style-type: none;
 }
+
+.rotateScreen {
+  font-size: 50px;
+  color: red;
+  margin: 1em 2em 30em;
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 566px) {
+  .rotateScreen {
+    display: none;
+  }
+  .gitGrid {
+    margin-left: 1vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { 
+  .gitGrid {
+  margin-left: 5vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 700px) {
+  .gitGrid {
+    margin-left: 5%;
+  }
+} 
+
+@media only screen and (min-width: 800px) {
+  .gitGrid {
+    margin-left: 10%;
+  }
+} 
+
+@media only screen and (min-width: 800px) {
+  .gitGrid {
+    margin-left: 15%;
+  }
+} 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .gitGrid {
+  margin-left: 20%;
+}}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .gitGrid {
+  margin-left: 28%;
+}}

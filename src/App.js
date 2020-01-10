@@ -29,6 +29,7 @@ class App extends Component {
         resetCalendar[i].dates[j].status = false;
       }
     }
+    this.state.textInput = '';
     this.setState({ resetCalendar: gitCalendar, storedDates: [] });
   }
 
@@ -114,6 +115,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="rotateScreen"> Please rotate screen horizontally </div>
         <div className="title">
           <h1>Git Commitment </h1>
           <h4>Click the squares or type to get dates for the commits</h4>
