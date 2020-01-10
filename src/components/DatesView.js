@@ -5,16 +5,16 @@ class DateView extends Component {
     return (
       <div className='datesView'>
         <h3> Commit Dates </h3>
-          <div>
+        <div>
           <p>To make the commit history above, commit on the following dates </p>
           <ul>
-          {this.props.dates.map((date,id)=>{
-            return(
+            {this.props.dates.map((date, id) => {
+              return (
                 <li key={id}>{date}</li>
               )
-          })}
+            })}
           </ul>
-          </div>
+        </div>
       </div>
     );
   }

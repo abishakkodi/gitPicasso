@@ -5,10 +5,12 @@ let gitCalendar = [];
 let momentCount = 0;
 let weekCount = 0;
 
-for(weekCount; weekCount < 52 ; weekCount++){
-  let weekObj = {week: weekCount,
-                  dates: []};
-  for(let i = 0; i < 7; i++, momentCount++){
+for (weekCount; weekCount < 52; weekCount++) {
+  let weekObj = {
+    week: weekCount,
+    dates: []
+  };
+  for (let i = 0; i < 7; i++ , momentCount++) {
     let tempDate = {};
     tempDate[i] = seedDate.clone().add(momentCount, 'd').format('dddd, MMMM Do YYYY'); //the calculated date
     tempDate['status'] = false;

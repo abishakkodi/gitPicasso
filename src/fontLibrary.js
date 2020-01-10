@@ -1,6 +1,4 @@
 const fontLibrary = {
-
-
   a: [
     [false, false, true, true, true, true, false],
     [false, true, false, true, false, false, false],
