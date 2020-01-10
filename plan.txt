@@ -1,9 +1,0 @@
-1. Create data structure to store in nested array
-Infinite line that uses initial start date (MAY 27th 2009) to start grid
-[[true, true, true, true, true, true, true, true]
-]
-2. Create data structure to hold info of letters and how to manipulate nested array to show letters
-
-3. Algorithm to parse store of data structures to display days to commit
-
-4. Render squares to show what message would look like

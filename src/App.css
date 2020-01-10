@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: 1fr repeat(52, 1fr) 1fr;
   grid-gap: .25fr;
-  max-width: 70%;
+  max-width: 640px;
   margin-left: 15%
 }
 
@@ -53,8 +53,17 @@ Body {
   margin-left: 10%;
 }
 
+.dateList {
+  display: flex;
+  flex-direction: column;
+}
+
 .entry {
   text-align: center;
+}
+
+.reset {
+  padding-top: 20px;
 }
 
 ul {
